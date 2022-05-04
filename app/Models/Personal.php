@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Personal extends Model
+{
+    use HasFactory;
+    protected $table = "PERSONAL";
+    protected $primarykey="IDPERSONAL";
+    protected $fillable=['IDPERSONAL, IDCARGO, NOMBRES, APELLIDO_PATERNO, 
+    APELLIDO_MATERNO, CELULAR, DNI, SEXO, GRADO_ACADEMICO, FECHA_NACIMIENTO, ESTADO_CIVIL,
+    EMAIL, DIRECCION, FECHA_INICIO, FECHA_CESE, TIPO_PENSION, NOMBRE_ASEGURADORA,
+    NUMERO_HIJOS, MODALIDAD_PAGO, ENTIDAD_FINANCIERA, NUMERO_CUENTA, CCI, ASIGNACION_FAMILIAR,
+    MONTO_ASIGNACION_FAM, ESTADO, ESTADO_USER, PLANILLA, PERIODO, FOTO, FACEBOOK, TWITTER, INSTAGRAM, YOUTUBE, TIKTOK, WEB'];
+}
