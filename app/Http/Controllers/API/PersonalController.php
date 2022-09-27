@@ -51,6 +51,10 @@ class PersonalController extends Controller
         };
     }
 
+    public function shortUrl($dni) {
+        $ran_url = substr(md5(microtime()), rand(0, 26), 5);
+    }
+
     public function show($dni)
     {
         $dniDecryp = $this->decryptt($dni);
