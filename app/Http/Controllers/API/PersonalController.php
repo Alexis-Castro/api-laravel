@@ -59,7 +59,7 @@ class PersonalController extends Controller
     {
         $dniDecryp = $this->decryptt($dni);
 
-        $consulta = Personal::select('PERSONAL.nombres','PERSONAL.apellido_paterno','PERSONAL.apellido_materno','CARGOS.descripcion AS cargo','PERSONAL.foto','PERSONAL.celular','PERSONAL.email','PERSONAL.web','PERSONAL.facebook','PERSONAL.twitter','PERSONAL.youtube','PERSONAL.tiktok', 'PERSONAL.estado')
+        $consulta = Personal::select('PERSONAL.nombres','PERSONAL.apellido_paterno','PERSONAL.apellido_materno','CARGOS.descripcion AS cargo','PERSONAL.foto','PERSONAL.celular','PERSONAL.email','PERSONAL.estado')
         ->join('CARGOS', 'PERSONAL.idcargo', '=', 'CARGOS.idcargo')
         ->where('PERSONAL.dni','=', $dniDecryp)
         ->get();
